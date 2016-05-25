@@ -53,6 +53,7 @@ public class MyClientSpringBoot {
 
     /**
      * Create a MessageListener for a MessageConsumer
+     * adjust local variable boolean 'succesful' if you want to acknowledge a specific message or not
      * @return
      */
     private MessageListener setMessageListener() {
@@ -62,9 +63,9 @@ public class MyClientSpringBoot {
                 ActiveMQTextMessage activeMQTextMessage = (ActiveMQTextMessage) message;
                 System.out.println("message received: " + activeMQTextMessage.getMessageId());
 
-                boolean succesfull = false;
+                boolean succesful = false;
 
-                if (!succesfull) {
+                if (!succesful) {
                     try {
                         System.out.println("message acknowledged");
                         message.acknowledge();
