@@ -1,0 +1,10 @@
+**/target/
+.idea/
+.idea/**
+**/*.iml
+*.iml
+**/src/main/resources/application.properties
+**/gradle/
+build.gradle
+gradlew
+gradlew.bat
